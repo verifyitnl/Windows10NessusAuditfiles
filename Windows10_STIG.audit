@@ -61,6 +61,17 @@
  powershell_option	: CAN_BE_NULL
 </custom_item>
 
+<custom_item>
+ type			: REGISTRY_SETTING
+ description	: "CCE-42775-7:Always install with elevated privileges:Windows10:20170405"
+ info			: "STIG V-63325"
+ value_type		: POLICY_DWORD
+ value_data		: 0
+ reg_key		: "HKLM\Software\Policies\Microsoft\Windows\Installer"
+ reg_item		: "AlwaysInstallElevated"
+ reg_option		: CAN_NOT_BE_NULL
+</custom_item>
+
 </then>
 </if>
 
