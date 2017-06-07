@@ -128,7 +128,16 @@
 
 # Todo:  add check V-63379 The Enhanced Mitigation Experience Toolkit (EMET) v5.5 or later must be installed on the system. 
 
-
+<custom_item>
+ type				: AUDIT_POWERSHELL
+ description		: "V-63377:Internet Information System (IIS) or its subcomponents must not be installed on a workstation:Windows10:20170406"
+ info				: "This check verifies if all IIS (sub)components are NOT in the enabled state"
+ value_type			: POLICY_TEXT
+ value_data			: "Enabled"
+ powershell_args	: 'Get-WindowsOptionalFeature -online | where {$_.FeatureName -match \\"IIS*\\"} | ft'
+ check_type			: CHECK_NOT_EQUAL
+ powershell_option	: CAN_BE_NULL
+</custom_item>
 
 </then>
 </if>
