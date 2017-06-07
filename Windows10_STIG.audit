@@ -6,7 +6,7 @@
 <condition type: "AND">
 <custom_item>
  type			: REGISTRY_SETTING
- description	: "WINDOWS1000001:Windows 10 Enterprise LTSB is installed:Windows10:20170405"
+ description	: "WINDOWS1000001:Verify if Windows 10 is installed:Windows10:20170405"
  info			: "This check determines if Windows 10"
  value_type		: POLICY_TEXT
  reg_key		: "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion"
@@ -17,7 +17,7 @@
 
 <custom_item>
  type			: REGISTRY_SETTING
- description	: "WINDOWS1000002:Windows 10 Enterprise LTSB is installed:Windows10:20170405"
+ description	: "WINDOWS1000002:Verify if Windows 10 is installed:Windows10:20170405"
  info			: "This check determines if Windows 10 is installed."
  value_type		: POLICY_TEXT
  reg_key		: "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion"
