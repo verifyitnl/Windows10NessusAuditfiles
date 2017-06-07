@@ -39,6 +39,17 @@
  reg_item		: "NoLMHash"
 </custom_item>
 
+<custom_item>
+ type			: REGISTRY_SETTING
+ description	: "CCE-42852-4:Solicited Remote Assistance must not be allowed:Windows10:20170407"
+ info			: "STIG V-63651"
+ value_type		: POLICY_DWORD
+ reg_key		: "HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services"
+ reg_item		: "fAllowToGetHelp"
+ value_data		: 0
+ reg_option 	: CAN_NOT_BE_NULL
+</custom_item>
+
 
 </then>
 </if>
