@@ -83,6 +83,17 @@
  powershell_option	: CAN_BE_NULL
 </custom_item>
 
+<custom_item>
+ type			: REGISTRY_SETTING
+ description	: "CCE-41844-2:Autoplay must be turned off for non-volume devices:Windows10:20170407"
+ info			: "STIG V-63667"
+ value_type		: POLICY_DWORD
+ value_data		: 1
+ reg_key		: "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer"
+ reg_item		: "NoAutoplayfornonVolume"
+ reg_option		: CAN_NOT_BE_NULL
+</custom_item>
+
 </then>
 </if>
 
