@@ -126,6 +126,10 @@
  reg_option		: CAN_NOT_BE_NULL
 </custom_item>
 
+# Todo:  add check V-63379 The Enhanced Mitigation Experience Toolkit (EMET) v5.5 or later must be installed on the system. 
+
+
+
 </then>
 </if>
 
