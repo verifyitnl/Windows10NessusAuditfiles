@@ -29,6 +29,16 @@
 </condition>
 <then>
 
+<custom_item>
+ type			: REGISTRY_SETTING
+ description	: "CCE-43657-6:The system must be configured to prevent the storage of the LAN Manager hash of passwords:Windows10:20170411"
+ info			: "STIG V-63797"
+ value_type		: POLICY_DWORD
+ value_data		: 1
+ reg_key		: "HKLM\System\CurrentControlSet\Control\Lsa"
+ reg_item		: "NoLMHash"
+</custom_item>
+
 
 </then>
 </if>
