@@ -115,6 +115,17 @@
  reg_option		: CAN_NOT_BE_NULL
 </custom_item>
 
+<custom_item>
+ type			: REGISTRY_SETTING
+ description	: "CCE-41501-8:The default Autorun behavior must be configured to prevent Autorun commands:Windows10:20170410"
+ info			: "STIG V-63671"
+ value_type		: POLICY_DWORD
+ value_data		: 1
+ reg_key		: "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer"
+ reg_item		: "NoAutorun"
+ reg_option		: CAN_NOT_BE_NULL
+</custom_item>
+
 </then>
 </if>
 
