@@ -72,6 +72,17 @@
  reg_option		: CAN_NOT_BE_NULL
 </custom_item>
 
+# Exclude Floppy and CDROM drives by adding drive letter to [ABZ]
+<custom_item>
+ type				: AUDIT_POWERSHELL
+ description		: "V-63353:Local volumes must be formatted using NTFS (excluding ABZ):Windows10:20170405"
+ value_type			: POLICY_TEXT
+ value_data			: ""
+ powershell_args	: 'get-wmiobject win32_volume | where-object {$_.filesystem -notmatch \'ntfs\' -and $_.Driveletter -notmatch \'[ABZ]\'} | Select DriveLetter | ft -HideTableHeaders'
+ check_type			: CHECK_EQUAL
+ powershell_option	: CAN_BE_NULL
+</custom_item>
+
 </then>
 </if>
 
