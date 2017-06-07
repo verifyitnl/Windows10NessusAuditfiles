@@ -50,6 +50,16 @@
  reg_option 	: CAN_NOT_BE_NULL
 </custom_item>
 
+<custom_item>
+ type				: AUDIT_POWERSHELL
+ description		: "CCE-44192-3:The Debug programs user right must only be assigned to the Administrators group:Windows10:20170411"
+ info				: "STIG V-63869"
+ value_type			: POLICY_TEXT
+ value_data			: ""
+ powershell_args	: 'Get-WmiObject -NameSpace Root\\RSOP\\Computer -Class RSOP_PolicySetting | Where {$_.UserRight -match \'SeDebugPrivilege\' -and $_.precedence -eq 1 -and $_.Accountlist -ne $null} | Select -ExpandProperty Accountlist | Where {$_ -ne \\"administrators\\" }'
+ check_type			: CHECK_EQUAL
+ powershell_option	: CAN_BE_NULL
+</custom_item>
 
 </then>
 </if>
