@@ -94,6 +94,16 @@
  reg_option		: CAN_NOT_BE_NULL
 </custom_item>
 
+<custom_item>
+ type			: REGISTRY_SETTING
+ description	: "CCE-43105-6:Anonymous access to Named Pipes and Shares must be restricted:Windows10:20170411"
+ info			: "STIG V-63759"
+ value_type		: POLICY_DWORD
+ value_data		: 1
+ reg_key		: "HKLM\System\CurrentControlSet\Services\LanManServer\Parameters"
+ reg_item		: "restrictnullsessaccess"
+</custom_item>
+
 </then>
 </if>
 
