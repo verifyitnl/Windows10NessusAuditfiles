@@ -104,6 +104,17 @@
  reg_item		: "restrictnullsessaccess"
 </custom_item>
 
+<custom_item>
+ type			: REGISTRY_SETTING
+ description	: "CCE-43848-1:Autoplay must be disabled for all drives:Windows10:20170410"
+ info			: "STIG V-63673"
+ value_type		: POLICY_DWORD
+ value_data		: 255
+ reg_key		: "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer"
+ reg_item		: "NoDriveTypeAutoRun"
+ reg_option		: CAN_NOT_BE_NULL
+</custom_item>
+
 </then>
 </if>
 
