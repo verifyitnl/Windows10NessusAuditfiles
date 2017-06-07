@@ -1,0 +1,39 @@
+<check_type: "Windows" version:"2">
+<group_policy: "MS Windows 10">
+
+
+<if>
+<condition type: "AND">
+<custom_item>
+ type			: REGISTRY_SETTING
+ description	: "WINDOWS1000001:Windows 10 Enterprise LTSB is installed:Windows10_TIER0:20170405"
+ info			: "This check determines if Windows 10"
+ value_type		: POLICY_TEXT
+ reg_key		: "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion"
+ reg_item		: "ProductName"
+ value_data		: "Windows 10"
+ check_type		: CHECK_REGEX
+</custom_item>
+
+<custom_item>
+ type			: REGISTRY_SETTING
+ description	: "WINDOWS1000002:Windows 10 Enterprise LTSB is installed:Windows10_TIER0:20170405"
+ info			: "This check determines if Windows 10 is installed."
+ value_type		: POLICY_TEXT
+ reg_key		: "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion"
+ reg_item		: "CurrentVersion"
+ value_data		: "6.3"
+ check_type		: CHECK_REGEX
+</custom_item>
+
+</condition>
+<then>
+
+
+</then>
+</if>
+
+
+
+ </group_policy>
+</check_type>
